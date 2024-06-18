@@ -10,21 +10,28 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
+        @auth
         <li class="nav-item">
-          <a class="nav-link" href="#">Articoli</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Registrati</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Logout</a>
+          <a class="nav-link" href="#" onclick="
+          event.preventDefault();
+          getElementById('form-logout').submit();
+          ">Logout</a>
+          <form id="form-logout" action="/logout" method="POST" class="d-none">@csrf</form>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Inserisci articolo</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Articoli</a>
+        </li>
+        @else
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/register">Registrati</a>
+        </li>
+        @endauth
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown link
