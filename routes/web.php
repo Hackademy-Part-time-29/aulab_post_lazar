@@ -5,7 +5,7 @@ use App\Http\Controllers\ArticleController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('homepage');
 
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
 

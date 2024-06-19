@@ -46,7 +46,7 @@ class ArticleController extends Controller
             'user_id' => Auth::user()->id,
         ]);
 
-        return redirect(route('homapage'))->With('message', 'Articolo creato con successo');
+        return redirect()->back()->with(['success'=> 'Articolo creato con successo']);
     }
 
     /**
