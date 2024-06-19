@@ -34,7 +34,7 @@
   <div class="mb-3">
     <label class="form-label">Categoria</label>
     <input type="category" class="form-control @error('category') is-invalid @enderror" name="category">
-    @error('caetgory')
+    @error('category')
     {{$message}}
     @enderror
   </div>

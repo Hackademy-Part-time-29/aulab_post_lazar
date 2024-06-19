@@ -19,7 +19,7 @@
           <form id="form-logout" action="/logout" method="POST" class="d-none">@csrf</form>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Inserisci articolo</a>
+          <a class="nav-link" href="{{route('article.create')}}">Inserisci articolo</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Articoli</a>
