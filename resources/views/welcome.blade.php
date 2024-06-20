@@ -9,10 +9,19 @@
     <h5 class="card-title">{{$article->title}}</h5>
     <h6 class="card-text">{{$article->subtitle}}</h6>
     <p class="card-text">{{$article->body}}</p>
-    <a href="#" class="btn btn-primary">Leggi l'articolo</a>
+    <a href="{{route('article.show', $article)}}" class="btn btn-primary">Leggi l'articolo</a>
   </div>
 </div>
         </div>
+        <p class="small text-muted">
+          Categoria: 
+          <a href="{{route('article.byCategory', $article->category)}}" class="text-capitalize text-muted">{{$article->category->name}}</a>
+        </p>
+        <p class="small text-muted">
+          Autore: 
+          <a href="{{route('article.byUser', $article->user)}}" class="text-capitalize text-muted">{{$article->user->name}}</a>
+        </p>
         @endforeach
+       
     </div>
 </x-layout>

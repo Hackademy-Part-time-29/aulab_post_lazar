@@ -1,6 +1,5 @@
 <x-layout>
-
-    <h1>Tutti gli articoli</h1>
+<h1 class="display-1 text-capitalize">{{$user->name}}</h1>
     <div class="row">
         @foreach($articles as $article)
         <div class="col-4">
@@ -14,15 +13,8 @@
   </div>
 </div>
         </div>
-        <p class="small text-muted">
-          Categoria: 
-          <a href="{{route('article.byCategory', $article->category)}}" class="text-capitalize text-muted">{{$article->category->name}}</a>
-        </p>
-        <p class="small text-muted">
-          Autore: 
-          <a href="{{route('article.byUser', $article->user)}}" class="text-capitalize text-muted">{{$article->user->name}}</a>
-        </p>
+        
         @endforeach
-      
     </div>
+
 </x-layout>
