@@ -37,7 +37,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="formFile" class="form-label">Inserisci immagine</label>
-                        <input class="form-control" type="file" id="formFile" name="image">
+                        <input class="form-control @error('image') is-invalid @enderror" type="file" id="formFile" name="image">
                         @error('image')
                             {{ $message }}
                         @enderror
@@ -45,8 +45,8 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Categoria</label>
-                        {{-- <input type="text" class="form-control @error('name') is-invalid @enderror" name="name"> --}}
-                        <select name="category" class="form-control" id="">
+                        <select name="category" class="form-control @error('image') is-invalid @enderror">
+                            <option>Scegli la categoria</option>
                             @foreach ($categories as $category)
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach
@@ -55,13 +55,14 @@
                             {{ $message }}
                         @enderror
                     </div>
-                    <div class="form-floating">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="body"></textarea>
-                        <label for="floatingTextarea">Articolo</label>
+                    <div class="form-label">
+                    <label>Corpo del testo</label>
+                        <textarea class="form-control @error('body') is-invalid @enderror" name="body"></textarea>
                         @error('body')
                             {{ $message }}
                         @enderror
                     </div>
+                    <br>
                     <button type="submit" class="btn btn-primary">Crea articolo</button>
                 </form>
             </div>

@@ -22,7 +22,7 @@
           <a class="nav-link" href="{{route('article.create')}}">Inserisci articolo</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Articoli</a>
+          <a class="nav-link" href="{{route('article.index')}}">Articoli</a>
         </li>
         @else
         <li class="nav-item">
