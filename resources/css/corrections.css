@@ -1,0 +1,22 @@
+.imageLimit{
+    width: 1000px;
+    height: 600px;
+
+}
+/* .nav{
+    background-color: #0957ac;
+}
+.navText{
+    color: antiquewhite; 
+}
+.navText:hover{
+    color: antiquewhite; 
+} */
+.card-img-top{
+    width: 100%;
+    height: 11vw;
+    object-fit: cover;
+}
+.noDec{
+    text-decoration: none;
+}

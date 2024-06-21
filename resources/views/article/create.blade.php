@@ -2,7 +2,7 @@
     <div class="container p-5 text-center">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h1 class="display-1">Inserisci un articolo</h1>
+                <h1 class="display-3">Crea il tuo articolo</h1>
                 @session('success')
                 <div class="alert alert-success" role="alert">
                   {{session('success')}}
@@ -57,7 +57,7 @@
                     </div>
                     <div class="form-label">
                     <label>Corpo del testo</label>
-                        <textarea class="form-control @error('body') is-invalid @enderror" name="body"></textarea>
+                        <textarea class="form-control @error('body') is-invalid @enderror" rows="25" name="body"></textarea>
                         @error('body')
                             {{ $message }}
                         @enderror
