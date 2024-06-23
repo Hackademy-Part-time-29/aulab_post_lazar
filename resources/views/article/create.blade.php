@@ -57,7 +57,7 @@
                     </div>
                     <div class="form-label">
                     <label>Corpo del testo</label>
-                        <textarea class="form-control @error('body') is-invalid @enderror" rows="25" name="body"></textarea>
+                        <textarea class="form-control @error('body') is-invalid @enderror" rows="25" name="body">{{old('body')}}</textarea>
                         @error('body')
                             {{ $message }}
                         @enderror

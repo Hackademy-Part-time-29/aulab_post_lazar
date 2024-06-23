@@ -9,6 +9,7 @@
     </head>
     <body>
         <x-navbar/>
+        <div class="separator"></div>
         <div class="container">
         {{$slot}}
         </div>

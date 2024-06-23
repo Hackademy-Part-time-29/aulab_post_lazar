@@ -10,7 +10,7 @@
     <form method="POST" action="/login">
         @csrf
   <div class="mb-3">
-    <label class="form-label">Email address</label>
+    <label class="form-label">Email</label>
     <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{old('email')}}">
     @error('email')
     {{$message}}
