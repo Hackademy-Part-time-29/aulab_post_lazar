@@ -17,3 +17,5 @@ Route::post('/article/store', [ArticleController::class, 'store'])->middleware('
 Route::get('article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
 Route::get('article/category/{category}',[ArticleController::class, 'byCategory'])->name('article.byCategory');
 Route::get('article/user/{user}',[UserController::class, 'byUser'])->name('article.byUser');
+Route::get('/careers',[UserController::class,'careers'])->name('careers');
+Route::post('/careers/submit',[UserController::class,'careersSubmit'])->name('careers.submit');
