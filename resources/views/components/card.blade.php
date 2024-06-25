@@ -4,7 +4,7 @@
   <div class="card-body">
     <h5 class="card-title">{{$article->title}}</h5>
     <h6 class="card-text">{{$article->subtitle}}</h6>
-    <p class="card-text">{{Str::limit($article->body)}}</p>
+    <p class="card-text">{{Str::limit($article->body, 33)}}</p>
     <a href="{{route('article.show', $article)}}" class="btn btn-primary">Leggi l'articolo</a>
     <p class="small text-muted my-2">Categoria: <br>
         <a href="{{route('article.byCategory', $article->category)}}" class="text-capitalize fw-bold text-muted">{{$article->category->name}}</a>

@@ -19,7 +19,7 @@ return new class extends Migration
         });
         User::create([
             'name'=>'Admin',
-            'emali'=>'admin@theaulabpost.it',
+            'email'=>'admin@theaulabpost.it',
             'password'=> bcrypt('12345678'),
             'is_admin'=> true
         ]);
