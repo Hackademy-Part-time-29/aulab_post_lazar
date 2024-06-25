@@ -8,7 +8,15 @@
         <div class="col-3">
           <x-card :article="$article"/>
         </div>
-        @endforeach
-       
+        @endforeach 
+
+         @if (session('alert'))
+         <div class="alert alert-danger">
+         {{session('alert')}}
+         </div>
+         @endif
     </div>
+   
+    
+    
 </x-layout>

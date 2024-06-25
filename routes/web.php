@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -19,3 +20,6 @@ Route::get('article/category/{category}',[ArticleController::class, 'byCategory'
 Route::get('article/user/{user}',[UserController::class, 'byUser'])->name('article.byUser');
 Route::get('/careers',[UserController::class,'careers'])->name('careers');
 Route::post('/careers/submit',[UserController::class,'careersSubmit'])->name('careers.submit');
+Route::middleware('admin')->group(function(){
+    Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+});
