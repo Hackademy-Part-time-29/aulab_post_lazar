@@ -10,5 +10,21 @@
     <h3 class="text-center">{{$article->subtitle}}</h3>
     <p class="article-ele">{{$article->body}}</p>
     </div>
+    @if(Auth::user() && Auth::user()->revisor)
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-evenly">
+                <form action="{{route('revisor.acceptArticle',$article)}}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-secondary">Accetta l'articolo</button>
+                </form>
+                <form action="{{route('revisor.rejectArticle',$article)}}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-secondary">Rifiuta l'articolo</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    @endif
    
 </x-layout>

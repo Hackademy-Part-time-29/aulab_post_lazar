@@ -9,13 +9,12 @@ use App\Http\Controllers\RevisorController;
 
 
 Route::get('/', function () {
-    $articles=Article::orderBy('created_at', 'desc')->take(4)->get();
+    $articles=Article::where('is_accepted', true)->orderBy('created_at', 'desc')->take(4)->get();
     return view('welcome', compact('articles'));
 })->name('homepage');
 
-Route::get('/article/create', [ArticleController::class, 'create'])->middleware('auth')->name('article.create');
+
 Route::get('article/index', [ArticleController::class, 'index'])->name('article.index');
-Route::post('/article/store', [ArticleController::class, 'store'])->middleware('auth')->name('article.store');
 Route::get('article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
 Route::get('article/category/{category}',[ArticleController::class, 'byCategory'])->name('article.byCategory');
 Route::get('article/user/{user}',[UserController::class, 'byUser'])->name('article.byUser');
@@ -31,4 +30,13 @@ Route::middleware('admin')->group(function(){
 });
 Route::middleware('revisor')->group(function(){
     Route::get('/revisor/dashboard', [RevisorController::class, 'dashboard'])->name('revisor.dashboard');
+});
+Route::middleware('revisor')->group(function(){
+    Route::post('/revisor/{article}/accept',[RevisorController::class,'acceptArticle'])->name('revisor.acceptArticle');
+    Route::post('/revisor/{article}/reject',[RevisorController::class,'rejectArticle'])->name('revisor.rejectArticle');
+    Route::post('/revisor/{article}/undo',[RevisorController::class,'undoArticle'])->name('revisor.undoArticle');
+});
+Route::middleware('writer')->group(function(){
+    Route::get('/article/create', [ArticleController::class, 'create'])->middleware('auth')->name('article.create');
+    Route::post('/article/store', [ArticleController::class, 'store'])->middleware('auth')->name('article.store');
 });
