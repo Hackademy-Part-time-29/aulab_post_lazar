@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\AdminController;
 use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\RevisorController;
 
 
 Route::get('/', function () {
@@ -27,4 +28,7 @@ Route::middleware('admin')->group(function(){
     Route::patch('/admin/{user}/set-admin', [Admin::class, 'setAdmin'])->name('admin.setAdmin');
     Route::patch('/admin/{user}/set-revisor', [Admin::class, 'setRevisor'])->name('admin.setRevisor');
     Route::patch('/admin/{user}/set-writer', [Admin::class, 'setWriter'])->name('admin.setWriter');
+});
+Route::middleware('revisor')->group(function(){
+    Route::get('/revisor/dashboard', [RevisorController::class, 'dashboard'])->name('revisor.dashboard');
 });

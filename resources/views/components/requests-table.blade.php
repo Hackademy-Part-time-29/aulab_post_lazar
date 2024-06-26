@@ -3,7 +3,7 @@
   <thead class="table-dark">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Nome</th>
+      <th scope="col">Titolo</th>
       <th scope="col">Email</th>
       <th scope="col">Azioni</th>
     </tr>
