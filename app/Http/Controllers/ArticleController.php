@@ -32,6 +32,7 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
+        
         $request->validate([
             'title'=> 'required|unique:articles|min:5',
             'subtitle' => 'required|min:5',
@@ -39,7 +40,7 @@ class ArticleController extends Controller
             'image' => 'required|image',
             'category' => 'required',
             ]);
-
+            
         $article = Article::create([
             'title' => $request->title,
             'subtitle' => $request->subtitle,

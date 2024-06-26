@@ -46,7 +46,7 @@
                     <div class="mb-3">
                         <label class="form-label">Categoria</label>
                         <select name="category" class="form-control @error('image') is-invalid @enderror">
-                            <option>Scegli la categoria</option>
+                            <option value= "">Scegli la categoria</option>
                             @foreach ($categories as $category)
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach
