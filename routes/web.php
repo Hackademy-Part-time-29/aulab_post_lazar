@@ -23,3 +23,8 @@ Route::post('/careers/submit',[UserController::class,'careersSubmit'])->name('ca
 Route::middleware('admin')->group(function(){
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 });
+Route::middleware('admin')->group(function(){
+    Route::patch('/admin/{user}/set-admin', [Admin::class, 'setAdmin'])->name('admin.setAdmin');
+    Route::patch('/admin/{user}/set-revisor', [Admin::class, 'setRevisor'])->name('admin.setRevisor');
+    Route::patch('/admin/{user}/set-writer', [Admin::class, 'setWriter'])->name('admin.setWriter');
+});

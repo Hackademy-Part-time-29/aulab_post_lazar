@@ -14,6 +14,9 @@
           <a class="nav-link" href="{{route('article.index')}}">Articoli</a>
         </li>
         @auth
+        <li class = "nav-item">
+          <a class= "nav-link" href="{{route ('admin.dashboard')}}">Dashboard amministratori</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="{{route('article.create')}}">Inserisci articolo</a>
         </li>
