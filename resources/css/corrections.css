@@ -23,7 +23,17 @@ body{
     border-radius: 0%;
 }
 .navbar{
-    background-color: #dfdfdf;
+    background-color: rgb(35,53,101);
+    
+}
+
+.nav-link{
+    color: antiquewhite;
+
+}
+
+.nav-link:hover{
+    color: rgb(155, 155, 155);
 }
 .separator{
     padding-top: 3.6rem;
@@ -38,4 +48,10 @@ body{
 }
 .category-pad{
     padding: 2.0rem;
+}
+.logo{
+    height: 3.2rem;
+    width: 4.5rem;
+    border-radius: 30%;
+
 }
