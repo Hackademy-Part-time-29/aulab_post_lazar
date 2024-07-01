@@ -69,7 +69,7 @@ class ArticleController extends Controller
 
     public static function middleware(){
         return[
-            new Middleware ('auth', except: ['index', 'show','byCategory', 'byUser']),
+            new Middleware ('auth', except: ['index', 'show','byCategory', 'byUser','articleSearch']),
         ];
     }
 
@@ -98,5 +98,10 @@ class ArticleController extends Controller
     public function destroy(Article $article)
     {
         //
+    }
+    public function articleSearch(Request $request){
+        $query = $request->input('query');
+        $article = Article::search($query)->where('is_accepted', true)->orderBy('created_at', 'desc')->get();
+        return view('article.search-index', compact('articles','query'));
     }
 }

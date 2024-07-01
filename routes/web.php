@@ -24,9 +24,9 @@ Route::middleware('admin')->group(function(){
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 });
 Route::middleware('admin')->group(function(){
-    Route::patch('/admin/{user}/set-admin', [Admin::class, 'setAdmin'])->name('admin.setAdmin');
-    Route::patch('/admin/{user}/set-revisor', [Admin::class, 'setRevisor'])->name('admin.setRevisor');
-    Route::patch('/admin/{user}/set-writer', [Admin::class, 'setWriter'])->name('admin.setWriter');
+    Route::patch('/admin/{user}/set-admin', [AdminController::class, 'setAdmin'])->name('admin.setAdmin');
+    Route::patch('/admin/{user}/set-revisor', [AdminController::class, 'setRevisor'])->name('admin.setRevisor');
+    Route::patch('/admin/{user}/set-writer', [AdminController::class, 'setWriter'])->name('admin.setWriter');
 });
 Route::middleware('revisor')->group(function(){
     Route::get('/revisor/dashboard', [RevisorController::class, 'dashboard'])->name('revisor.dashboard');
@@ -40,3 +40,4 @@ Route::middleware('writer')->group(function(){
     Route::get('/article/create', [ArticleController::class, 'create'])->middleware('auth')->name('article.create');
     Route::post('/article/store', [ArticleController::class, 'store'])->middleware('auth')->name('article.store');
 });
+Route::get('/article.search', [ArticleController::class, 'articleSearch'])->name('article.search');
