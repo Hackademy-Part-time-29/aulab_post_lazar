@@ -12,6 +12,11 @@
         <p class="small text-muted"> Autore: <br>
           <a href="{{route('article.byUser', $article->user)}}" class="text-capitalize fw-bold text-muted">{{$article->user->name}}</a>
         </p>
+        <p class="small text-muted my-0">
+          @foreach ($article->tags as $tag)
+          #{{ $tag->name }}
+          @endforeach
+        </p>
   </div>
 
 </div>

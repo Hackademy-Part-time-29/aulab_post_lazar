@@ -2,6 +2,11 @@
 <p class="category-pad" class="fs-5"> Categoria:
         <a href="{{route('article.byCategory', $article->category)}}" class="text-capitalize fw-bold text-muted">{{$article->category->name}}</a>
     </p>
+    <p class="small text-muted my-0">
+        @foreach ($article->tags as $tag)
+        #{{ $tag->name }}
+        @endforeach
+      </p>
     <div>
         <div class="article-ele" class="d-flex justify-content-center">
     <img src="{{Storage::url($article->image)}}" alt="" class="imageLimit">

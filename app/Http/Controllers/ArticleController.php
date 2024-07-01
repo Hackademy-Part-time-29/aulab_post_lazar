@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
 use App\Models\Article;
 use App\Models\Category;
 use GuzzleHttp\Middleware;
@@ -39,6 +40,7 @@ class ArticleController extends Controller
             'body' => 'required|min:10',
             'image' => 'required|image',
             'category' => 'required',
+            'tags' => 'required'
             ]);
             
         $article = Article::create([
@@ -50,7 +52,19 @@ class ArticleController extends Controller
             'user_id' => Auth::user()->id,
         ]);
 
-        return redirect()->back()->with(['success'=> 'Articolo creato con successo']);
+        $tags = explode(',', $request->tags);
+
+        foreach($tags as $i => $tag){
+            $tags[$i] = trim($tag);
+        }
+
+        foreach($tags as $tag){
+            $newTag = Tag::updateOrCreate([
+                'name' => strtolower($tag)
+            ]);
+            $article->tags()->attach($newTag);
+        }
+        return redirect(route('homepage'))->with(['messages', 'Articolo creato con successo']);
     }
 
     /**
