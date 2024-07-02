@@ -36,7 +36,7 @@
           </a>
           <ul class="dropdown-menu">
           <li class="dropdown-item">
-          <a class="nav-link" href="#" onclick="
+          <a class="nav-link textAuth" href="#" onclick="
           event.preventDefault();
           getElementById('form-logout').submit();
           ">Logout</a>
@@ -61,10 +61,12 @@
         @endauth
       </ul>
     </div>
+    <div class="searchBar">
+    <form action="{{route('article.search')}}" method="GET" class="d-flex" role="search">
+      <input class="form-control me-2" type="search" name="query" placeholder="Cerca tra gli articoli..." aria-label="Search">
+      <button class="btn btn-outline-secondary" type="submit">Cerca</button>
+    </form>
   </div>
-  <form action="{{route('article.search')}}" method="GET" class="d-flex" role="search">
-    <input class="form-control me-2" type="search" name="query" placeholder="Cerca tra gli articoli..." aria-label="Search">
-    <button class="btn btn-outline-secondary" type="submit">Cerca</button>
-  </form>
+  </div>
 </nav>
 </div>

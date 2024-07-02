@@ -1,6 +1,4 @@
 <x-layout>
-
-      
   <br>
     <h1 class="display-3">Benvenuto su {{env('APP_NAME')}}!</h1>
     @if (session('alert'))

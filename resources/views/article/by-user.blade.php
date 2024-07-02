@@ -5,7 +5,6 @@
         <div class="col-3 my-2">
         <x-card :article="$article"/>
         </div>
-        
         @endforeach
     </div>
 
