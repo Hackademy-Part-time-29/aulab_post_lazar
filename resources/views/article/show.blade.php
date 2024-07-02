@@ -19,7 +19,7 @@
     <h3 class="text-center">{{$article->subtitle}}</h3>
     <p class="article-ele">{{$article->body}}</p>
     </div>
-    @if(Auth::user() && Auth::user()->revisor)
+    @if(Auth::user() && Auth::user()->is_revisor)
     <div class="container my-5">
         <div class="row">
             <div class="col-12 d-flex justify-content-evenly">
@@ -27,7 +27,7 @@
                     @csrf
                     <button type="submit" class="btn btn-secondary">Accetta l'articolo</button>
                 </form>
-                <form action="{{route('revisor.rejectArticle',$article)}}" method="POST">
+                <form action="{{route('revisor.rejectedArticle',$article)}}" method="POST">
                     @csrf
                     <button type="submit" class="btn btn-secondary">Rifiuta l'articolo</button>
                 </form>

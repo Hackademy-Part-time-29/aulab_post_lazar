@@ -12,7 +12,7 @@ class RevisorController extends Controller
         $acceptedArticles = Article::where('is_accepted', true)->get();
         $rejectedArticles = Article::where('is_accepted', false)->get();
 
-        return view('revisor.dashboard', compact('unrevisionedArticles', 'rejectedArticles'));
+        return view('revisor.dashboard', compact('unrevisionedArticles', 'rejectedArticles', 'acceptedArticles'));
     }
     
     public function acceptArticle(Article $article){

@@ -14,14 +14,14 @@
           <a class="nav-link" href="{{route('article.index')}}">Articoli</a>
         </li>
         @auth
-        @if(Auth::user()->is_admin)++
+        @if(Auth::user()->is_admin)
         <li class="nav-item">
-          <a class= "nav-link" href="{{route ('admin.dashboard')}}">Dashboard amministratori</a>
+          <a class= "nav-link" href="{{route ('admin.dashboard')}}">Dashboard Amministratori</a>
         </li>
         @endif
         @if(Auth::user()->is_revisor)
         <li class="nav-item">
-          <a class="nav-link" href="{{route ('revisor.dashboard')}}">Dashboard revisor</a>
+          <a class="nav-link" href="{{route ('revisor.dashboard')}}">Dashboard Revisor</a>
         </li>
         @endif
         <li class="nav-item">
@@ -51,10 +51,10 @@
           </a>
           <ul class="dropdown-menu">
           <li class="dropdown-item">
-          <a class="nav-link" href="/login">Login</a>
+          <a class="nav-link textAuth" href="/login">Login</a>
         </li>
         <li class="dropdown-item">
-          <a class="nav-link" href="/register">Registrati</a>
+          <a class="nav-link textAuth" href="/register">Registrati</a>
         </li>
           </ul>
         </li>

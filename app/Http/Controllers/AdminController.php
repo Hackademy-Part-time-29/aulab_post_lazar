@@ -40,7 +40,7 @@ class AdminController extends Controller
         $tag->update([
             'name'=>strtolower($request->name),
         ]);
-        return redirect()->back()->with('message','Tag aggionrato correttamente');
+        return redirect()->back()->with('message','Tag aggiornato correttamente');
     }   
     public function deleteTag(Tag $tag){
         foreach($tag->articles as $article){
@@ -62,7 +62,7 @@ class AdminController extends Controller
         $category->delete();
         return redirect()->back()->with('message', 'Categoria eliminata correttamente');
     }
-    public function storeCategory(Request $Request){
+    public function storeCategory(Request $request){
         Category::create([
             'name'=>strtolower($request->name),
         ]);

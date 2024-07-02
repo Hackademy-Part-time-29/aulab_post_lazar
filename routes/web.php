@@ -38,7 +38,7 @@ Route::middleware('revisor')->group(function(){
 });
 Route::middleware('revisor')->group(function(){
     Route::post('/revisor/{article}/accept',[RevisorController::class,'acceptArticle'])->name('revisor.acceptArticle');
-    Route::post('/revisor/{article}/reject',[RevisorController::class,'rejectArticle'])->name('revisor.rejectArticle');
+    Route::post('/revisor/{article}/reject',[RevisorController::class,'rejectedArticle'])->name('revisor.rejectedArticle');
     Route::post('/revisor/{article}/undo',[RevisorController::class,'undoArticle'])->name('revisor.undoArticle');
 });
 Route::middleware('writer')->group(function(){
