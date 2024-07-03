@@ -66,6 +66,12 @@ body{
 .searchBar{
     padding-top: 1.0rem;
 }
+.footer{
+    background-color: rgb(35,53,101) ;
+    color: antiquewhite;
+    height: 10rem;
+    margin-top: 3rem;
+}
 
 
 
