@@ -30,7 +30,7 @@ body{
 }
 .navbar{
     background-color: rgb(35,53,101);
-    
+    padding: 1.0rem;
 }
 
 .nav-link{
@@ -55,10 +55,17 @@ body{
 .category-pad{
     padding: 2.0rem;
 }
-.logo{
-    height: 3.2rem;
-    width: 6.2rem;
+.logoScrolled{
+    height: 4.2rem;
+    width: 8.1rem;
 
+}
+.logo{
+    height: 5.5rem;
+    width: 10.4rem;
+}
+.navPadder{
+    padding: 2.0rem;
 }
 .textAuth{
      color: #5f5f5f;
@@ -68,10 +75,37 @@ body{
 }
 .footer{
     background-color: rgb(35,53,101) ;
-    color: antiquewhite;
-    height: 10rem;
+    color:  rgb(236, 236, 236);
+    height: 10.8rem;
     margin-top: 3rem;
+    
+
+
 }
-
-
+.separatorFooter{
+    padding: 1.5rem;
+    padding-bottom: 0rem;
+}
+.logoFooter{
+    height: 7.2rem;
+    width: 13rem;
+}
+.logoPadder{
+    padding-top: 2.0rem;
+}
+.underline{
+    text-decoration: underline;
+}
+.centerLogo{
+    position: absolute;
+    left: 50%;
+    margin-left: -90px !important;
+    display: block;
+}
+.centerLogoSmall{
+    position: absolute;
+    left: 50%;
+    margin-left: -72.5px !important;
+    display: block;
+}
 

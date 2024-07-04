@@ -2,11 +2,10 @@
     <div class="footer container-fluid">
         <div class="row">
             <div class="col-12 d-flex justify-content-around align-item-center">
-                
-                <h4>
-                    {{env('APP_NAME')}}
-                </h4>
-                <div>
+                <div class="logoPadder">
+                    <img class="logoFooter" src="/img/logo/logo2.png" alt="">
+                </div>
+                <div class="separatorFooter">
                  <h5>Contattaci ai seguenti indirizzi</h5>
                  <ul>
                     <li>
@@ -20,12 +19,13 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{{route('careers')}}">Lavora con noi</a>
+                        <a class="nav-link underline" aria-current="page" href="{{route('careers')}}">Lavora con noi</a>
                     </li>
                     
                  </ul>
                 </div>
             </div>
         </div>
+        
 
    
