@@ -1,4 +1,4 @@
-<x-layout>
+
 
 <table class="table table-striped table-hover">
     <thead>
@@ -32,4 +32,3 @@
     </tbody>
   </table>
 
-</x-layout>
