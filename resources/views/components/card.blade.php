@@ -6,7 +6,7 @@
     <h6 class="card-text">{{$article->subtitle}}</h6>
     <p class="card-text">{{Str::limit($article->body, 33)}}</p>
     <hr>
-    <a href="{{route('article.show', $article)}}" class="btn btn-primary">Leggi l'articolo</a>
+    <a href="{{route('article.show', $article)}}" class="btn buttonCard">Leggi l'articolo</a>
     @if($article->category)
     <p class="small text-muted my-2">Categoria: <br>
         <a href="{{route('article.byCategory', $article->category)}}" class="text-capitalize fw-bold text-muted">{{$article->category->name}}</a>

@@ -11,8 +11,8 @@
     </head>
     <body>
         <x-navbar/>
-        <div class="separator"></div>
-        <div class="container">
+        <div class=""></div>
+        <div class="container separator">
         {{$slot}}
         </div>
         <x-footer/>

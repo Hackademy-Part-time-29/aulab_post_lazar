@@ -32,7 +32,12 @@
         @endif
         @if(Auth::user()->is_revisor)
         <li class="dropdown-item">
-          <a class="nav-link textAuth" href="{{route ('revisor.dashboard')}}">Dashboard Revisor</a>
+          <a class="nav-link textAuth" href="{{route ('revisor.dashboard')}}">Dashboard Revisori</a>
+        </li>
+        @endif
+        @if(Auth::user()->is_writer)
+        <li class="dropdown-item">
+            <a class= "nav-link textAuth" href="{{route ('writer.dashboard')}}">Dashboard Redattori</a>
         </li>
         @endif
           </ul>

@@ -7,7 +7,7 @@
   <div class="container w-50">
   <div class="row justify-content-center">
   <div class="col-12 col-md-8">
-    <form method="POST" action="/login">
+    <form method="POST" action="/login" class="card p-5 shadow">
         @csrf
   <div class="mb-3">
     <label class="form-label">Email</label>
@@ -27,5 +27,8 @@
 </form>
 </div>
 </div>
+</div>
+<div class="authPadderLogin">
+
 </div>
 </x-layout>

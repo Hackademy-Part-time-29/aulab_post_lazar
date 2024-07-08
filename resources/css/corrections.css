@@ -12,21 +12,12 @@ body{
 
 }
 .card-img-top{
-    width: 70%;
-    height: 11vw;
+    width: 100%;
+    height: 11vw; 
     object-fit: cover;
-    border-radius: 10%;
-    border-color: rgb(35,53,101);
-    margin-top: 5%;
-    margin-left: 15%;
-    margin-right: 5%;
-    
 }
 .noDec{
     text-decoration: none;
-}
-.card{
-    border-radius: 5%;
 }
 .navbar{
     background-color: rgb(35,53,101);
@@ -42,7 +33,7 @@ body{
     color: rgb(187, 187, 187);
 }
 .separator{
-    padding-top: 6rem;
+    padding-top: 9rem;
 }
 .scrolledNavbar{
     opacity: 90%;
@@ -99,7 +90,7 @@ body{
 .centerLogo{
     position: absolute;
     left: 50%;
-    margin-left: -90px !important;
+    margin-left: -91px !important;
     display: block;
 }
 .centerLogoSmall{
@@ -107,5 +98,19 @@ body{
     left: 50%;
     margin-left: -72.5px !important;
     display: block;
+}
+.authPadderLogin{
+    padding-bottom: 17.12rem;
+}
+.authPadderReg{
+   padding-bottom: 4.9rem; 
+}
+.buttonCard{
+    color:rgb(251, 250, 250) ;
+    background-color: rgb(87, 126, 235);
+}
+.buttonCard:hover{
+    color: rgb(206, 206, 206); ;
+    background-color: rgb(62, 94, 180);
 }
 

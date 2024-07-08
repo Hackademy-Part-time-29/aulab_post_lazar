@@ -7,7 +7,7 @@
     <div class="container-fluid p-5 text-center">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h1 class="display-1">Bentornato Revisore {{Auth::user()->name}}</h1>
+                <h1 class="display-1">Bentornato Redattore {{Auth::user()->name}}</h1>
             </div>
         </div>
     </div>
@@ -15,7 +15,7 @@
         <div class="class row justify-content-center">
             <div class="col-12">
                 <h2>Articoli da revisionare</h2>
-                <x-articles-table :articles="$unrevisionedArticles"/>
+                <x-writer-articles-table :articles="$unrevisionedArticles"/>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <h2>Articoli pubblicati</h2>
-                <x-articles-table :articles="$acceptedArticles"/>
+                <x-writer-articles-table :articles="$acceptedArticles"/>
             </div>
         </div>
     </div>
@@ -31,7 +31,7 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <h2>Articoli respinti</h2>
-                <x-articles-table :articles="$rejectedArticles"/>
+                <x-writer-articles-table :articles="$rejectedArticles"/>
             </div>
         </div>
     </div>

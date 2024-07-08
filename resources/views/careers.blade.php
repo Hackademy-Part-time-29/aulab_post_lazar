@@ -39,7 +39,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="message" class="form-label">Perchè vuoi candidarti per questo
-                            ruolo?Raccontacelo</label>
+                            ruolo? Raccontacelo</label>
                         <textarea name="message" id="message" cols="30" rows="10" class="form-control">{{ old('message') }}</textarea>
                         @error('message')
                             <span class="text-danger">{{ $message }}</span>
@@ -47,7 +47,7 @@
                     </div>
 
                     <div class="mt-3 d-flex justify-content-center">
-                        <button type="submit" class="btn btn-outline-secondary">Invia la candidatura</button>
+                        <button type="submit" class="btn buttonCard">Invia la candidatura</button>
                     </div>
 
                 </form>
@@ -59,9 +59,9 @@
                     aggiungere e modificare le categorie. </p>
                 <h2>Lavora come revisore</h2>
                 <p>Scegliendo di lavorare come revisore, deciderai se un articolo può essere pubblicato o meno in
-                    piattaforma</p>
+                    piattaforma.</p>
                 <h2> Lavora come redattore</h2>
-                <p>Scegliendo di lavorare come redattore, potrai scrivere gli articoli che saranno pubblicati</p>
+                <p>Scegliendo di lavorare come redattore, potrai scrivere gli articoli che saranno pubblicati.</p>
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@
     <div class="container w-50">
     <div class="row justify-content-center">
     <div class="col-12 col-md-8">
-    <form method="POST" action="/register">
+    <form method="POST" action="/register" class="card p-5 shadow">
         @csrf
     <div class="mb-3">
     <label class="form-label">Nome e cognome</label>
@@ -42,5 +42,8 @@
 </form>
 </div>
 </div>
+</div>
+<div class="authPadderReg">
+
 </div>
 </x-layout>
