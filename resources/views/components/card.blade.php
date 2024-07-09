@@ -1,6 +1,6 @@
 <div>
 <div class="card" style="width: 18rem; height:36rem;">
-  <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="...">
+  <img src="{{Storage::url($article->image)}}" class="card-img-top" alt="Immagine dell'articolo {{$article->title}}">
   <div class="card-body">
     <h5 class="card-title">{{$article->title}}</h5>
     <h6 class="card-text">{{$article->subtitle}}</h6>
@@ -21,6 +21,11 @@
           @foreach ($article->tags as $tag)
           #{{ $tag->name }}
           @endforeach
+          
+        </p>
+        <p class="card-subtitle text-muted fst-italic small">
+          Tempo di lettura {{$article->readDuration()}} min.
+
         </p>
   </div>
 
