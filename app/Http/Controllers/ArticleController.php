@@ -139,6 +139,8 @@ class ArticleController extends Controller
             $newTags[]=$newTag->id;
         }
         $article->tags()->sync($newTags);
+        $article->is_accepted=NULL;
+        $article->save();
         return redirect(route('writer.dashboard'))->with('message','Articolo modificato con successo');
     }
 
@@ -150,6 +152,7 @@ class ArticleController extends Controller
         foreach($article->tags as $tag){
             $article->tags()->detach($tag);
         }
+        Storage::delete($article->image);
         $article->delete();
         return redirect()->back()->with('message','Articolo cancellato con successo');
     }
