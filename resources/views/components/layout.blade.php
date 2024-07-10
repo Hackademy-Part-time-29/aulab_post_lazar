@@ -12,7 +12,6 @@
     </head>
     <body>
         <x-navbar/>
-        <div class=""></div>
         <div class="container separator">
         {{$slot}}
         </div>

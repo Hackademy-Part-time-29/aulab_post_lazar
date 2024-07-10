@@ -25,7 +25,6 @@
         </p>
         <p class="card-subtitle text-muted fst-italic small">
           Tempo di lettura {{$article->readDuration()}} min.
-
         </p>
   </div>
 

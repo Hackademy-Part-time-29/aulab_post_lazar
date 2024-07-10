@@ -38,7 +38,7 @@
     {{$message}}
     @enderror
   </div>
-  <button type="submit" class="btn btn-primary">Registrati</button>
+  <button type="submit" class="btn buttonCard">Registrati</button>
 </form>
 </div>
 </div>

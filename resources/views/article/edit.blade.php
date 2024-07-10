@@ -66,7 +66,7 @@
                         @enderror
                     </div>
                     <div class="mt-3 d-flex justify-content-center flex-column align-items-center">
-                        <button type="submit" class="btn btn-outline-secondary">Modifica articolo</button>
+                        <button type="submit" class="btn buttonCard">Modifica articolo</button>
                         <a href="{{route('homepage')}}" class="text-secondary mt-2">Torna alla home</a>
                     </div>
                 </form>
