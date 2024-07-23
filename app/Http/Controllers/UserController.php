@@ -14,7 +14,7 @@ class UserController extends Controller implements HasMiddleware
 { 
     public static function middleware(){
         return[
-            new Middleware('auth', except:['homepage']),
+            new Middleware('auth', except:['homepage', 'byUser']),
         ];
     }
     public function byUser(User $user){

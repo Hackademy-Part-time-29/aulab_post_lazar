@@ -130,6 +130,11 @@ body{
     margin-left: 7rem;
     margin-right: 7rem;
 }
-
+.cardEleH{
+    min-height: 2.34rem;
+}
+.cardEleH2{
+    min-height: 2.97rem;
+}
 
 

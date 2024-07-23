@@ -83,7 +83,7 @@ class ArticleController extends Controller
         return view('article.by-category', compact('category', 'articles'));
 
     }
-
+    
     public static function middleware(){
         return[
             new Middleware ('auth', except: ['index', 'show','byCategory', 'byUser','articleSearch']),
